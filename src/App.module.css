@@ -1,0 +1,11 @@
+.container {
+  max-width: 768px;
+  padding: 1em;
+  margin: 0 auto;
+}
+.app-title {
+  font-size: var(--biggest-font-size);
+  color: var(--title-color);
+  margin-bottom: 32px;
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+.contact-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.contact-item {
+  display: flex;
+}
+.svg-icon {
+  margin-right: 16px;
+}
+.btn-contact {
+  padding: 0.5em;
+  display: flex;
+  font-weight: var(--font-medium);
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  transition: color 400ms ease-in, fill 400ms ease-in, box-shadow 400ms ease-in;
+}
+.btn-contact:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: var(--first-color);
+  fill: var(--first-color);
+}
+.btn-contact:focus {
+  border-color: var(--first-color);
+}
