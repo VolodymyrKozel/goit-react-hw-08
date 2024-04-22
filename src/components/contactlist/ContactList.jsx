@@ -4,14 +4,19 @@ import {
   selectContacts,
   selectNameFilter,
   selectVisibleContacts,
-} from '../../redux/selectors';
+} from '../../redux/contacts/selectors';
 import css from './ContactList.module.css';
+import { useEffect, useRef } from 'react';
 export default function ContactList() {
+  const containerDiv = useRef(null);
+  useEffect(() => {
+    containerDiv.current.classList.add(css['fade-in-bottom']);
+  });
   const contacts = useSelector(selectContacts);
   const query = useSelector(selectNameFilter);
   const contactsData = useSelector(selectVisibleContacts);
   return (
-    <ul className={css['contact-list']}>
+    <ul ref={containerDiv} className={css['contact-list']}>
       {contacts && contacts.length === 0 && (
         <li className={css['contact-item']}>You have no contacts yet</li>
       )}

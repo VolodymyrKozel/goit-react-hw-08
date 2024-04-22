@@ -5,6 +5,11 @@
 .contact-item {
   display: flex;
 }
+
+.btnWrapper {
+  display: flex;
+  gap: 16px;
+}
 .svg-icon {
   margin-right: 16px;
 }

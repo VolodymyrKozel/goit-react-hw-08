@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.username {
+  font-weight: 500;
+  color: var(--white-color);
+}
+.btn {
+  padding: 0.5em;
+  display: flex;
+  font-weight: var(--font-medium);
+  align-items: center;
+  background-color: var(--container-color);
+  gap: 8px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  transition: color 400ms ease-in, fill 400ms ease-in,
+    border-color 400ms ease-in;
+}
+.btn:hover {
+  color: var(--first-color);
+  fill: var(--first-color);
+}
+.btn:focus {
+  border-color: var(--first-color);
+}

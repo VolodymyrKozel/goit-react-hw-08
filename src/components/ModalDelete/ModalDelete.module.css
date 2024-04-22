@@ -1,0 +1,60 @@
+.title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: 16px;
+}
+.accent {
+  font-style: italic;
+  color: var(--first-color);
+}
+.btn-wrapper {
+  justify-content: center;
+  display: flex;
+  gap: 16px;
+}
+
+.modalDelete {
+  position: absolute;
+  padding: 48px;
+  top: -100%;
+  left: 50%;
+  width: 80%;
+  max-width: 480px;
+  background-color: var(--container-color);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: translate(-50%, -50%);
+  transition: top 0.4s ease;
+  z-index: 999;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.afterOpen {
+  top: 50%;
+}
+.beforeClose {
+  top: -100%;
+}
+.btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color 400ms ease-in;
+}
+.btn-close:hover {
+  color: var(--first-color);
+}
+.icon {
+  width: 32px;
+  height: auto;
+}

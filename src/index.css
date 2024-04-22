@@ -90,3 +90,82 @@ button {
   cursor: pointer;
   background-color: transparent;
 }
+.container {
+  max-width: 768px;
+  padding: 1rem 1rem;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+
+.svg-icon {
+  margin-right: 16px;
+}
+.btn {
+  padding: 0.5em;
+  display: flex;
+  font-weight: var(--font-medium);
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  transition: color 400ms ease-in, fill 400ms ease-in, box-shadow 400ms ease-in;
+}
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: var(--first-color);
+  fill: var(--first-color);
+}
+.btn:focus {
+  border-color: var(--first-color);
+}
+.title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: 16px;
+}
+.accent {
+  font-style: italic;
+  color: var(--first-color);
+}
+
+.btn-add {
+  position: fixed;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--white-color);
+  background-color: var(--first-color);
+  transition: box-shadow 400ms ease-in, border-color 400ms ease-in,
+    color 400ms ease-in;
+  z-index: 100;
+}
+.btn-add:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-color: var(--first-color);
+}
+.active {
+  cursor: not-allowed;
+  background-color: var(--border-color);
+  border-color: var(--first-color);
+  color: var(--first-color);
+}
+.text {
+  margin-bottom: 16px;
+}
+.link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 400ms ease-in;
+}
+.link:hover {
+  color: var(--first-color);
+}
