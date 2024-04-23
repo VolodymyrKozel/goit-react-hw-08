@@ -9,9 +9,7 @@ export const selectContactById = createSelector(
   }
 ); */
 export const selectContactById = (state, contactId) => {
-  if (!contactId) {
-    return;
-  }
+  if (!contactId) return;
   const contacts = selectContacts(state);
   return contacts.find(contact => contact.id === contactId);
 };

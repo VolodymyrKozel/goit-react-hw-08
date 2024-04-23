@@ -13,7 +13,7 @@ function EditContact() {
   const navigate = useNavigate();
   const error = useSelector(selectError);
   const dispatch = useDispatch();
-  const currentContact = useSelector(selectContactById(id));
+  const currentContact = useSelector(state => selectContactById(state, id));
   const initialValues = {
     name: currentContact.name,
     number: currentContact.number,
