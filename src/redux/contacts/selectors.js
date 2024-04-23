@@ -1,5 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
-export const selectContacts = state => state.contacts.items; /* 
+export const selectContacts = state => state.contacts.items;
+/* 
 export const selectContactById = createSelector(
   [selectContacts],
   (state, id) => {
@@ -19,7 +20,7 @@ export const selectIsLoading = state => state.contacts.loading;
 export const selectError = state => state.contacts.error;
 
 export const selectNameFilter = state => state.filters.name;
-export const selectVisibleContacts = createSelector(
+export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, filter) => {
     return contacts.filter(
@@ -30,7 +31,7 @@ export const selectVisibleContacts = createSelector(
   }
 );
 export const seclectSortedContacts = createSelector(
-  [selectVisibleContacts],
+  [selectFilteredContacts],
   contacts => {
     return [...contacts].sort((a, b) => a.name.localeCompare(b.name));
   }

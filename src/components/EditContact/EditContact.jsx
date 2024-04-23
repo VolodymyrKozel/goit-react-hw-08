@@ -7,12 +7,13 @@ import ContactForm from '../contactform/ContactForm';
 import css from './EditContact.module.css';
 import { IoIosClose } from 'react-icons/io';
 import { useEffect, useRef } from 'react';
+import { selectError } from '../../redux/contacts/selectors';
 function EditContact() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const error = useSelector(state => state.contacts.error);
+  const error = useSelector(selectError);
   const dispatch = useDispatch();
-  const currentContact = useSelector(state => selectContactById(state, id));
+  const currentContact = useSelector(selectContactById(id));
   const initialValues = {
     name: currentContact.name,
     number: currentContact.number,

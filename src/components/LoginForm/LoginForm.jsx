@@ -4,6 +4,7 @@ import Loader from '../Loader/Loader';
 import { logIn } from '../../redux/auth/operations';
 import { nanoid } from 'nanoid';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { selectIsLoading } from '../../redux/contacts/selectors';
 import * as Yup from 'yup';
 import css from './LoginForm.module.css';
 
@@ -18,8 +19,7 @@ const initialValues = {
 };
 
 export const LoginForm = () => {
-  /*  const error = useSelector(state => state.auth.error); */
-  const isLoading = useSelector(state => state.auth.isLoading);
+  const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
   const emailFieldId = nanoid();
   const passwordFieldId = nanoid();

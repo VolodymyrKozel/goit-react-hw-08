@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import {
   selectContacts,
   selectNameFilter,
-  selectVisibleContacts,
+  selectFilteredContacts,
 } from '../../redux/contacts/selectors';
 import css from './ContactList.module.css';
 import { useEffect, useRef } from 'react';
@@ -14,7 +14,7 @@ export default function ContactList() {
   });
   const contacts = useSelector(selectContacts);
   const query = useSelector(selectNameFilter);
-  const contactsData = useSelector(selectVisibleContacts);
+  const contactsData = useSelector(selectFilteredContacts);
   return (
     <ul ref={containerDiv} className={css['contact-list']}>
       {contacts && contacts.length === 0 && (
